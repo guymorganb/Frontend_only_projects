@@ -1,0 +1,19 @@
+{
+  "name": "svg_generator",
+  "version": "1.0.0",
+  "description": "Quickly create a .svg logo and test using Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "GuyMorganB",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "inquirer": "^8.2.4",
+    "jsdom": "^22.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}

@@ -1,0 +1,124 @@
+/* Universal Selector set the border to border box and no margin or padding*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* Set Background color, and veiw height*/
+body {
+    background-color: #d9dcd6;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    padding: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    font-size: xx-large;
+    background-color: #2a607c;
+    color: #ffffff;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+}
+header span {
+    color: #d9dcd6;
+}
+section{
+    width: 100vw;
+}
+/* Fit the main image to the page*/
+section div img{
+    object-fit: cover;
+}
+.background{
+    width: 100vw;
+    height: 100vh;
+}
+/* setting the nav bar inside of the header and using calc() to set padding on links*/
+nav{
+    display: inline-flex; 
+    flex-flow: row;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: calc(100vw - 850.90px);
+}
+nav a {
+    font-size: large;
+    padding: .5em;
+}
+/* set the color after its clicked */
+a:link {
+    color: #ffffff;
+  }
+/* set the link to appear differently after its clicked */
+a:visited {
+    color: #d9dcd6;
+}
+/* set the text decoration on link so it obvios when mouse is hovering its a link*/
+a:hover {
+    text-decoration: none;
+}
+/* setup the main element format */
+main{
+    margin: 1em;
+    display: flex;
+    flex-wrap: column wrap;
+    flex-grow: inherit;
+}
+article{
+    display: flex;
+    background-color: #0072bb;
+    padding: .9em; 
+}
+figure{
+    display: flex; 
+    align-items: center;
+}
+figure img{
+    height: 318px
+}
+.a{
+    height: 200px
+}
+.text{
+    color: #ffffff;
+    font-family: 'Gill Sans';
+    padding-left: .5em;
+    padding-right: .5em;
+    font-size: large;
+}
+.h2{
+    flex-wrap: column wrap;
+}
+/* set font sive inside the box */
+.ul{
+    padding-top: 1em;
+    font-size: large;
+}
+/* setup the container for the aside element*/
+aside{
+    width: 13em;
+    margin-left: .5em;
+    color: #ffffff;
+}
+/* format the side elements */
+.aside{
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    background-color:#2589bd;
+    padding: .25em;
+}
+/* set font for main text */
+.aside h3 {
+    font-family: 'Gill Sans';
+    font-size: x-large;
+}
+/* set font for subtext */
+.aside:first-child{
+    font-size: medium;
+    font-family: 'Trebuchet MS';
+}
+

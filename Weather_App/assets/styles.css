@@ -1,0 +1,173 @@
+*{
+    margin:0;
+    border:0;
+    padding:0;
+
+}
+body{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(237, 235, 233);
+    height: fit-content;
+    width: fit-content;
+}
+
+.banner{
+    background: linear-gradient(rgb(126, 100, 98) 0%, #0D598B 100%);
+    text-align:center;
+    padding: 5px;
+    margin: 2px;
+   
+    
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.searchContainer{
+    display: flex;
+}
+form{
+    display: grid;
+}
+
+#search{
+    display: flex;
+    padding: 4px;
+    flex-direction: column;
+}
+
+input{
+    background-color: rgba(251, 243, 232, 0.766);
+    height:25px;
+    border: 0.5px solid gray;
+    border-radius: 40px/200px;
+}
+
+.search{
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 5px 0 5px 0;
+    border: none;
+}
+
+.search:hover{
+    background-color: blue;
+}
+
+.city{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 5px 0 5px 0;
+    border: none;
+    padding: 4px 8px 4px 8px;
+    border-radius: 5px;
+    background-color: lightgray; 
+}
+.delete{
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    background-color: rgb(218, 91, 91);
+    border-radius: 5px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px gray ;
+}
+.clear{
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 5px 0 5px 0;
+    border: none;
+    
+}
+
+.city:hover{
+    background-color: gray;
+}
+
+.currentCityContainer{
+    padding-left: 10px;
+}
+
+#townData{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 75vw;
+    margin-bottom: 5px;
+    background:linear-gradient(rgb(126, 100, 98) 0%, #0D598B 100%);
+}
+#time{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+#date{
+    color: beige;  
+
+}
+#emoji{
+    padding:5px;
+}
+#currentTown{
+    padding:5px;
+}
+#status{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    list-style: none; 
+    padding: 5px 10px 15px 3px;
+    align-items: left;
+}
+#status li{
+    padding: 5px 5px 5px 5px; 
+    color: beige;  
+    font-size: small;
+}
+.forecast{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#daysContainer{
+    padding: 5px 0px 5px 0;
+    display: flex;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+h3{
+    max-width: fit-content;
+    color:black
+}
+.days{
+    border: none;
+    display: grid;
+    height: fit-content;
+    flex-wrap: wrap;
+    background:linear-gradient(rgb(126, 100, 98) 0%, #0D598B 100%);
+    border-radius: 40px/60px;
+    
+    
+}
+
+
+@media screen and (max-width: 620px){
+    body{
+        border: none;
+        
+    }
+    #townData{
+        border:none;
+       
+    }
+}

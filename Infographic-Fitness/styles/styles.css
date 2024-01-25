@@ -1,0 +1,539 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #2F80ED; /* Fallback color behind the background image */
+    background-image: url('../assets/city.png'); /* Path to your background image */
+    background-position: center center; /* Center the image in both directions */
+    background-repeat: no-repeat;
+    background-size: cover; /* Cover the viewport without stretching */
+    color: #333;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #5f6a72, #8e9eab); /* Gradient effect */
+    padding: 10px 0;
+    text-align: center;
+    z-index: 2;
+    border-bottom: 3px solid #4b5561; /* Bottom border for depth */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+    color: #ffffff; /* White text */
+}
+nav p {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 15%; /* Offset text to the left */
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Attractive font */
+    font-size: 24px; /* Larger font size */
+    color: #2F80ED; /* Color that stands out */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.9); /* Text shadow for depth */
+}
+aside {
+    position: fixed;
+    top: 9%; /* placed below the nav bar */
+    left: 0;
+    bottom: 10%; /* placed the footer */
+    width: 200px; 
+    background: linear-gradient(to right, #909daa, #00bfff);
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5); /* Box shadow for aside */
+    border-radius: 20px/18px;
+    margin-left: 1%;
+    transition: left 0.3s;
+}
+
+ol{
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Evenly distribute space around items */
+    align-items: center; /* Center items horizontally */
+    position: fixed;
+    top: 5%;
+    left: 0;
+    bottom: 10%;
+    width: 200px;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    margin-left: 1%;
+    transition: left 0.3s;
+}
+ol li {
+    text-align: left;
+    margin-bottom: -10px;
+}
+#fn-1{
+    margin-left: 7px;
+    transform: scale(42%);
+    text-indent: -2em;      /* Negative indent for the first line */
+    padding-left: 2em;
+}
+#fn-2{
+    margin-left: 7px;
+    transform: scale(45%);
+    text-indent: -2em;      /* Negative indent for the first line */
+    padding-left: 2em; 
+}
+#fn-3{
+    margin-left: 7px;
+    transform: scale(50%);
+    text-indent: -2em;      /* Negative indent for the first line */
+    padding-left: 2em; 
+}
+#fn-4{
+    margin-left: 7px;
+    transform: scale(45%);
+    text-indent: -2em;      /* Negative indent for the first line */
+    padding-left: 4em; 
+}
+#fn-5{
+    margin-left: 7px;
+    transform: scale(50%);
+    text-indent: -2em;      /* Negative indent for the first line */
+    padding-left: 2em; 
+}
+ol li a{
+    font-size: 28px;
+}
+.content {
+    position: absolute;
+    top: 50px; /* Below the nav bar */
+    left: 210px; /* Adjust for aside + padding */
+    right: 0;
+    bottom: 60px; /* Above the footer */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    padding: 10px;
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-content: flex-start;
+}
+
+.element {
+    flex: 1;
+    width: 60%;
+    height: calc((100vh - 110px) / 3.5); /* Fit to viewport height */
+    background-color: transparent;
+    text-align: center;
+    
+    margin: 1em;
+    box-sizing: border-box;
+}
+.chartBackdrop{
+    background-color: rgba(168, 168, 168, 0.75);
+    border-radius: 25px;
+    
+}
+
+.element, .runner-image-container {
+    flex: 1; /* Flex grow */
+    min-width: 100px; /* Minimum width to prevent too much shrinking */
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Center horizontally */
+}
+
+.runner-image-container {
+    flex-basis: 30%; /* Set the base width to 30% */
+}
+
+footer {
+    position: fixed;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1;
+    background: linear-gradient(to top, #5f6a72, #8e9eab); /* Gradient effect */
+    border-top: 3px solid #4b5561; /* Top border for depth */
+    box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+    color: #ffffff; /* White text */
+}
+footer p {
+    font-size: calc(1em + 1vw);
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    padding-left: -30%;
+    font-size: 1em;
+    white-space: nowrap; 
+    overflow: hidden; 
+    border-right: 3px solid white; 
+    width: 0; 
+    animation: typewriter 45s steps(140) 3s infinite, blinkTextCursor 750ms steps(140) infinite;
+}
+.runner-image {
+    max-width: 100%; /* Scales the image down if it's larger than the element */
+    max-height: 100%; /* Scales the image down if it's taller than the element */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes any extra space below the image */
+}
+.graphic-container {
+    position: relative; /* For absolute positioning of the text overlay */
+    width: 100%; /* Full width of the parent */
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Center horizontally */
+    height: calc((100vh - 110px) / 3.5); 
+    min-width: 300px; /* Minimum width */
+    min-height: 200px;
+    border: 1px solid;
+}
+
+.graphic-container2 {
+    display: flex;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3), /* Outer shadow for depth */
+        inset -5px -5px 10px rgba(255, 255, 255, 0.5), /* Inner lighter shadow */
+        inset 5px 5px 10px rgba(0, 0, 0, 0.3); /* Inner darker shadow */
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: calc((100vh - 110px) / 3.5); /* setting the heigh of the section */
+    padding: 2px;
+    box-sizing: border-box;
+    background: linear-gradient(#a8b3bd, #41d0ff);
+    border-radius: 150px;
+}
+.middleSection{
+    background: linear-gradient(#708090, #00bfff);
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 30%;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3), /* Outer shadow for depth */
+    inset 5px 5px 10px rgba(0, 0, 0, 0.3), /* Inner darker shadow */
+        inset -5px -5px 10px rgba(255, 255, 255, 0.5); /* Inner lighter shadow */
+}
+.middleRow {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center the text */
+    max-width: 200px; /* Limit the width of each aside */
+}
+
+.middleRow img {
+    max-width: 100px; /* Limit the width of the images */
+    height: 33%; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and paragraph */
+    border-radius: 15px;
+    width: 33%;
+}
+
+.middleRow > h3 {
+    margin-top: 0; /* Remove top margin of headings */
+    margin-bottom: 5px; /* Space between heading and image */
+}
+
+.middleRow > p {
+    margin: 2px; /* Remove top margin of paragraphs */
+    text-align: left;
+    font-size: small;
+    border: .5px solid;
+    border-radius: 8px/14px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3), /* Outer shadow for depth */
+        inset -5px -5px 10px rgba(255, 255, 255, 0.5), /* Inner lighter shadow */
+        inset 5px 5px 10px rgba(0, 0, 0, 0.3); /* Inner darker shadow */
+    background-color: rgba(168, 168, 168, 0.6);
+    color: #f2f2f2;
+    padding: 5px;
+}
+
+.tableContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 60%;
+}
+.tableBackdrop {
+    display: flex;
+    flex-direction: row; /* Align children side by side */
+    justify-content: right; /* Space out the children evenly */
+    align-items: flex-start; /* Align items to the top */
+    border-radius: 25px;
+    box-sizing: border-box;
+    width: 90%; /* Adjust to fit the container's width */
+    margin: auto;
+}
+
+.males, .females {
+    flex: 1; /* Each child takes up equal space */
+}
+.h2text {
+    font-size: larger; /* Increase the size for H2 text */
+    color: aliceblue;
+    background-color: rgba(168, 168, 168, 0.6);
+    border-radius: 4px;
+}
+
+.h3text {
+    font-size: large; /* Increase the size for H3 text */
+    color: aliceblue;
+    background-color: rgba(168, 168, 168, 0.6);
+    border-radius: 4px;
+}
+table {
+    width: 50%; /* Table takes full width of the container */
+    max-width: 100%; /* Ensures table does not exceed container width */
+    border-collapse: collapse;
+    table-layout: auto; /* Adjusts column width based on content */
+}
+.iframe-style {
+    width: 17%; /* Adjust iframe width */
+    height: auto;
+    border: none;
+    margin: 1px;
+    border-radius: 15px;
+}
+.graphic-container, .runner-image {
+    transition: all 0.3s ease;
+}
+.text-overlay {
+    position: absolute;
+    top: 10px; /* Adjust as needed for top-left positioning */
+    left: 10px; /* Adjust as needed for top-left positioning */
+    color: white;
+    font-size: 1em;
+    text-align: left;
+    z-index: 10;
+}
+#toggleAside {
+    display: none; /* Initially hidden on larger screens */
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 3;
+    background-color: #2F80ED; /* A color that matches your nav bar */
+    color: white; /* Text color */
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    text-align: center; /* Center the text and icon */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    padding: 3px;
+}
+.graphic-image {
+    max-width: inherit;
+    height: inherit;
+    margin: 2px;
+}
+#toggleAside span {
+    display: block; /* Make the text a block element to appear above the icon */
+    font-size: 8px; /* Adjust font size */
+}
+#toggleAside:hover {
+    background-color: #1E60C5; /* Darker shade on hover */
+}
+.graphic-container canvas {
+    width: 100%;
+    height: 100%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+    color: #00bfff;
+}
+#PhysicalWellness{
+    border-radius: 8px/14px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3), /* Outer shadow for depth */
+        inset -5px -5px 10px rgba(255, 255, 255, 0.5), /* Inner lighter shadow */
+        inset 5px 5px 10px rgba(0, 0, 0, 0.3); /* Inner darker shadow */
+    padding: 5px;
+}
+#MentalWellness{
+    border-radius: 8px/14px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3), /* Outer shadow for depth */
+        inset -5px -5px 10px rgba(255, 255, 255, 0.5), /* Inner lighter shadow */
+        inset 5px 5px 10px rgba(0, 0, 0, 0.3); /* Inner darker shadow */
+    padding: 5px;
+}
+#EmotionalWellness{
+    border-radius: 8px/14px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3), /* Outer shadow for depth */
+        inset -5px -5px 10px rgba(255, 255, 255, 0.5), /* Inner lighter shadow */
+        inset 5px 5px 10px rgba(0, 0, 0, 0.3); /* Inner darker shadow */
+    padding: 5px;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+@media (max-width: 1434px) {
+    .tableBackdrop {
+        flex-direction: row; /* Stack tables vertically on smaller screens */
+    }
+    .h3text{
+        font-size: smaller;
+    }
+    .h2text{
+        font-size: medium;
+    }
+    .males, .females {
+        width: 70%; /* 40% smaller */
+        height: auto; /* Maintain aspect ratio */
+        transform: scale(0.70); /* Scale down while maintaining aspect ratio */
+        transform-origin: top; /* Ensure scaling happens from the top */
+        flex-direction: column;
+    }
+}
+@media (max-width: 1280px) {
+    .graphic-container3 {
+        padding: 2%;
+        width: 60%; /* 40% smaller */
+        height: auto; /* Maintain aspect ratio */
+        transform: scale(0.60); /* Scale down while maintaining aspect ratio */
+        transform-origin: top; /* Ensure scaling happens from the center */
+    }
+}
+@media (max-width: 1170px) {
+    .tableBackdrop {
+        flex-direction: row; /* Stack tables vertically on smaller screens */
+    }
+    .h3text{
+        font-size: small;
+    }
+    .h2text{
+        font-size: medium;
+    }
+    .males, .females {
+        width: 70%; /* 40% smaller */
+        transform: scale(0.70); /* Scale down while maintaining aspect ratio */
+        transform-origin: top; /* Ensure scaling happens from the top */
+        flex-direction: column;
+    }
+}
+@media (max-width: 1024px) {
+    .h3text{
+        font-size: small;
+    }
+    .h2text{
+        font-size: medium;
+    }
+    .males, .females {
+        width: 70%; /* 40% smaller */
+        transform: scale(0.70); /* Scale down while maintaining aspect ratio */
+        transform-origin: top; /* Ensure scaling happens from the top */
+        flex-direction: column;
+    }
+    .element {
+        width: 70%; /* Slightly wider on medium screens */
+    }
+}
+@media (max-width: 900px) {
+    .graphic-container3 {
+        padding: 2%;
+        width: 80%; /* 40% smaller */
+        height: auto; /* Maintain aspect ratio */
+        transform: scale(0.80); /* Scale down while maintaining aspect ratio */
+        transform-origin: top; /* Ensure scaling happens from the center */
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 767px) {
+    aside {
+        position: fixed;
+        top: 9%;
+        left: -200px; /* Start off-screen */
+        bottom: 10%;
+        width: 200px;
+        background-color: white;
+        padding: 10px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+        border-radius: 20px/18px;
+        margin-left: 1%;
+        transition: left 0.3s; /* Smooth transition for sliding effect */
+        z-index: 16; /* Ensure it's above other content */
+    }
+    ol{
+        position: fixed;
+        left: -200px; /* Start off-screen */
+        width: 200px;
+        padding: 10px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        margin-left: 1%;
+        transition: left 0.3s; /* Smooth transition for sliding effect */
+        z-index: 17; /* Ensure it's above other content */
+    }
+    #toggleAside {
+        display: block; /* Show button */
+    }
+    .content {
+        left: 10px; /* Adjust left position when aside is hidden */
+        right: 10px; /* Add some spacing to the right */
+    }
+    .element {
+        width: 100%; /* Full width on small screens */
+        margin: 10px 0; /* Adjust margin for better spacing */
+        height: auto; /* Adjust height for smaller screens */
+    }
+    .graphic-container {
+        height: auto; /* Adjust height for smaller screens */
+        margin-top: 8%;
+    }
+    .text-overlay {
+        font-size: 0.8em; /* Smaller font size for overlays */
+    }
+    
+    .a {
+        position: inherit;
+        width: 25%; /* Reduce the width to make the image smaller */
+        max-width: 25%px; /* Set a maximum width */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensures the image is a block-level element */
+        margin: 0 auto 10px; /* Center the image and add space below it */
+    }
+    .tableBackdrop {
+        flex-direction: column; /* Stack tables vertically on smaller screens */
+        transform: translateX(-20px);
+    }
+    
+    .males, .females {
+        width: 100%; /* Full width in a stacked layout */
+        margin-bottom: 10px; /* Space between stacked tables */
+    }
+}
+
+@keyframes typewriter {
+    0%, 31.25% { width: 0; }
+    31.25%, 62.5% { width: 133%; }
+    100% { width: 133%; }
+}
+@keyframes blinkTextCursor {
+    from { border-right-color: white; }
+    to { border-right-color: transparent; }
+}

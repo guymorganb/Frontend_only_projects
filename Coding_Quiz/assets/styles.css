@@ -1,0 +1,108 @@
+
+*{
+    
+    border: none;
+    padding:0;
+}
+section >div{
+    
+    border: 1px solid black;
+    padding: 0;
+    margin: 50px 0 0 10%;
+    min-height: 65vh;
+    max-width: 75vw;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 35px 0px 15px;    
+}
+#timer{
+    display: flex;
+}
+header #time{
+    padding: 0 10px 0 0;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 20px 30% 5px 30%;
+}
+#buttonContainer{
+    justify-content: center;
+
+}
+hr{
+    border: 1px solid lightslategray;
+    max-width: 50vw;
+}
+#text {
+    display: grid; 
+    max-width: fit-content;
+    
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+ 
+#button{
+    padding: 8px;
+    text-align: left;
+    justify-content: center;
+}
+button{
+    padding: 8px;
+    text-align: left;
+    margin: 1px;
+    border-radius: 5px;
+    background-color: aqua;
+}
+
+li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 0px 20% 0px 20%;
+    list-style: none;
+  }
+  .fade-in {
+    animation: fadeIn ease-in-out 1s;
+    opacity: 1;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  #formContainer{
+    justify-content: left;
+  }
+  #initials{
+    border:1px solid black;
+    height: 20px;
+  }
+  #clickSubmit{
+    text-align: center;
+    background-color: aqua;
+    border-radius: 5px;
+    padding: 3px 8px 3px 8px;
+    margin: 0 0 0 10px;
+  }
+  #highScores{
+    justify-content: left;
+    padding: 5px;
+    
+  }
+  #lastLi{
+    justify-content: left;
+  }
+  #lastBtn{
+    margin:5px;
+    border-radius: 5px;
+  }

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css"></style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <title>Fitness & Wellness in College Students</title>
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <h2 id="section1-heading" class="visually-hidden">Welcome to the infographic: Impact: Fitness on College Student Wellness. Please be advised, there is a toggle button avaliable in the navbar for devices which have a screen with of 768, this toggle will reveal the slide-out which contains links to the scholarly articles referenced in this infographic. </h2>
+        <button id="toggleAside">
+            <span>Toggle</span>
+            ☰
+        </button>
+        <p>Impact: Fitness on College Student Wellness</p>
+    </nav>
+
+    <!-- Aside -->
+    <aside>
+        <ol>
+            
+            <li id="fn-1">Trosclair, D., Mazerat, N., Smith, J., Judge, L., Bellar, D., & Brignac, A. (2011). The Relationship of BMI to Grade Point Average, Age and Multiple Fitness Tests. Journal of Strength & Conditioning Research, 25, 121–121. https://doi.org/10.1097/01.JSC.0000395773.04439.e0
+                <a href="https://journals.lww.com/nsca-jscr/abstract/2011/03001/the_relationship_of_bmi_to_grade_point_average,.193.aspx">1 ↩</a></li>
+            <li id="fn-2">Zhu, X., & Cheng, H. (2022a). Yang, Z., & Fu, X. (2022). Effect of fitness exercise on risk assessment of mental and emotional health. Journal of Sport Psychology / Revista de Psicología del Deporte, 31(1), 210-216. Journal of Sport Psychology / Revista de Psicología Del Deporte, 31(4), 42–51. https://www.rpd-online.com/index.php/rpd/article/view/664/248
+                <a href="https://www.rpd-online.com/index.php/rpd/article/view/664/248">2 ↩</a></li>
+            <li id="fn-3">Park, S., Chun, H., Etnier, J. L., & Yun, D. (2023). Exploring the mediating role of executive function in the relationship between aerobic fitness and academic achievement in adolescents. Brain Sciences, 13(4), 614. https://doi.org/10.3390/brainsci13040614
+                <a href="https://www.mdpi.com/2076-3425/13/4/614">3 ↩</a></li>
+            <li id="fn-4">Oliver, M. D., Morton, A. L., Baldwin, D. R., & Datta, S. (2019). A pilot study exploring the relationship between wellness and Physical Fitness: An examination into autonomic health. Journal of American College Health, 68(7), 712–719. https://doi.org/10.1080/07448481.2019.1596919
+                <a href="https://www.tandfonline.com/doi/full/10.1080/07448481.2019.1596919">4 ↩</a></li>
+            <li id="fn-5">Pang, Y., Pang, Y.-X., & Wang, Q. (2022). Revealing the inner-relevance of college students’ physical fitness by Association Analysis and neural network. Computational Intelligence and Neuroscience, 2022, 1–10. https://doi.org/10.1155/2022/3320942
+                <a href="https://www.hindawi.com/journals/cin/2022/3320942/">5 ↩</a></li>
+          </ol>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Section 1 -->
+        <section aria-labelledby="section1-heading">
+            <h2 id="section1-heading" class="visually-hidden">Infographic on The Impact of Fitness on College Students, section 1 depicts a bar chart showing the correlation between fitness and B.M.I of college students. The link for this data is https://journals.lww.com/nsca-jscr/abstract/2011/03001/the_relationship_of_bmi_to_grade_point_average,.193.aspx. the image to the right of the bar chart depict a diverse array of college students doing workouts.</h2>
+            <div class="element graphic-container chartBackdrop">
+                <canvas id="myChart"></canvas>
+                <div class="text-overlay"><sup><a href="#fn-1" id="ref-1" title="Toggle slider if viewing on mobile">[1]</a></sup></div>
+            </div>
+            <div class="element">
+                <image style="border-radius: 10%;" class="runner-image" alt="diverse group of college students working out" src="https://u-static.fotor.com/images/text-to-image/result/PRO-46f794cfd2a5454a856808eead8e745a.jpg"></image>
+                <!-- <image class="runner-image" alt="Runner" src="./assets/runner2.png"></image> -->
+            </div>
+        </section>
+        <!-- Section 2 -->
+        <section aria-labelledby="section2-heading" class="middleSection">
+            <h2 id="section2-heading" class="visually-hidden">Section 2 Physical, Emotional and Mental Wellbeing & how fitness impacts these areas. This section depicts 3 cards, with links to the scholarly articles the information are derived from, links are as follows. Card 1: https://www.rpd-online.com/index.php/rpd/article/view/664/248. Card 2: https://www.mdpi.com/2076-3425/13/4/614. Card 3: https://www.tandfonline.com/doi/full/10.1080/07448481.2019.1596919</h2>
+            <div class="element graphic-container2">
+                <article>
+                    <div class="middleRow" id="EmotionalWellness">
+                        <img class="a" src="https://u-static.fotor.com/images/text-to-image/result/PRO-1fc96cf9092a4fa1b1b87d00c16fa97d.jpg" alt="Emotional Wellness">
+                        <h3>Emotional Wellness</h3>
+                        <p>Physical activities overcome negative emotions and physiological barriers, benefits include enhanced fitness, illness prevention, and stress relief. Exercise combats the effects of aging.<sup><a href="#fn-2" id="ref-2" title="Toggle slider if viewing on mobile">[2]</a></sup></p>
+                      </div>
+                  </article>
+                  <article>
+                    <div class="middleRow" id="MentalWellness">
+                        <img class="a" src="https://u-static.fotor.com/images/text-to-image/result/PRO-c24ddb74cccf40728e48d053c8a62fb2.jpg" alt="Mental wellness">
+                        <h3>Mental Wellness</h3>
+                        <p>Aerobic fitness, consistently shows significant improvements in cognitive abilities, and aerobic fitness shares a moderate yet positive link with academic accomplishments <sup><a href="#fn-3" id="ref-3" title="Toggle slider if viewing on mobile">[3]</a></sup></p>
+                      </div>
+                  </article>
+                  <article>
+                    <div class="middleRow" id="PhysicalWellness">
+                        <img class="a" src="https://u-static.fotor.com/images/text-to-image/result/PRO-c34be7895937412abf5a53c0acea47b9.jpg" alt="Physical wellness">
+                        <h3>Physical Wellness</h3>
+                        <p>College students view muscular fitness as an indicator of health. Maintaining physical activity, through muscle-strengthening exercises, can enhance quality of life and cardiovascular health of college students.<sup><a href="#fn-4" id="ref-4" title="Toggle slider if viewing on mobile">[4]</a></sup></p>
+                      </div>
+                  </article>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section aria-labelledby="section3-heading">
+            <h2 id="section3-heading" class="visually-hidden">Section 3 contains a photo of 2 college students who appear to be physically fit. And to their right is a table demonsstrating information about key fitness indicators and their relationship to specific fitness activities. The link for this data is found here:https://www.hindawi.com/journals/cin/2022/3320942/</h2>
+            <div class="element graphic-container3">
+                <img class="runner-image" src="./assets/fitness.png" alt="2 fit college students sqating and smiling">
+                <iframe src="https://giphy.com/embed/4cXrGwezpRCCdZcg9o" frameborder="0" class="iframe-style" alt="this .gif is showing an A+ on a paper"></iframe>
+                <!-- <image class="runner-image" alt="Runner" src="./assets/runner2.png"></image> -->
+            </div>
+            <div class="element tableContainer">
+                <h2 class="h2text">Physical Fitness Indicators for College Students<sup><a href="#fn-5" id="ref-5" title="Toggle slider if viewing on mobile">[5]</a></sup></h2>
+                
+                <div class="tableBackdrop">
+                    <h3 class="h3text">Male Students</h3>
+                <div class="males">
+                <table id="maleStudentsTable" class="white-text-table">
+                    <thead>
+                        <tr>
+                            <th>Indicator</th>
+                            <th>Relation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be inserted using JavaScript -->
+                    </tbody>
+                </table>
+            
+                
+            </div>
+                <h3 class="h3text">Female Students</h3>
+                <div class="females">
+                <table id="femaleStudentsTable" class="white-text-table">
+                    <thead>
+                        <tr>
+                            <th>Indicator</th>
+                            <th>Relation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be inserted using JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <footer>
+            <p>
+                Questions or suggestions? 
+                <a href="http://www.guymorganb.com" style="color: #fef76b; text-decoration: none;">guymorganb@gmail.com</a> 
+                - or -  
+                <a href="mailto:guymorganb@gmail.com" style="color: #fef76b; text-decoration: none;">www.guymorganb.com -> contact</a>
+            </p>
+        <script src="./scripts/barChart.js" defer></script>
+        <script src="./scripts/fitnessChart.js" defer></script>
+    </footer>
+</body>
+</html>
