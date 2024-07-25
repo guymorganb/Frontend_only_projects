@@ -45,7 +45,7 @@ Construct a 99% confidence interval with 1% error for DEI viability:
 # Well use the normal probability density function expression:
 # $$\int \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x - \mu}{\sigma}\right)^2} \,dx $$
 # I will take that over a 99% interval:
-# $$ \int_{x_1}^{x_2} \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x - \mu}{\sigma}\right)^2} \, dx - \int_{-\infty}^{x_1} \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x - \mu}{\sigma}\right)^2} \, dx$$
+# ![Complex Integral Formula](https://latex.codecogs.com/gif.latex?%5Cint_%7Bx_1%7D%5E%7Bx_2%7D%20%5Cfrac%7B1%7D%7B%5Csigma%5Csqrt%7B2%5Cpi%7D%7D%20e%5E%7B-%5Cfrac%7B1%7D%7B2%7D%5Cleft%28%5Cfrac%7Bx%20-%20%5Cmu%7D%7B%5Csigma%7D%5Cright%29%5E2%7D%20%2C%20dx%20-%20%5Cint_%7B-%5Cinfty%7D%5E%7Bx_1%7D%20%5Cfrac%7B1%7D%7B%5Csigma%5Csqrt%7B2%5Cpi%7D%7D%20e%5E%7B-%5Cfrac%7B1%7D%7B2%7D%5Cleft%28%5Cfrac%7Bx%20-%20%5Cmu%7D%7B%5Csigma%7D%5Cright%29%5E2%7D%20%2C%20dx)
 # - The resulting calculation can be confirmed against the Statistician's z-table value for α/2 = .005 => z = 2.58 📊
 
 # $$\left(\frac{2.58}{.01}\right)^2$$ = 66564
@@ -54,15 +54,14 @@ Construct a 99% confidence interval with 1% error for DEI viability:
 # n = 33282
 
 ## Next apply (FPC) Finite Population Correction, 
-# $$ n_{\text{corrected}} = \frac{n_{\text{initial}}}{1 + \frac{n_{\text{initial}} - 1}{N}} \ $$
+# ![Formula](https://latex.codecogs.com/gif.latex?n_%7B%5Ctext%7Bcorrected%7D%7D%20%3D%20%5Cfrac%7Bn_%7B%5Ctext%7Binitial%7D%7D%7D%7B1%20&plus;%20%5Cfrac%7Bn_%7B%5Ctext%7Binitial%7D%7D%20-%201%7D%7BN%7D%7D)
 # - Since N is know from the U.S Census Bureau data.
 # N = 1,404,225
 # z = 2.576  
 # p = 0.5 
 # E = 0.01 
 # $$n_{\text{initial}}$$ = 33282
-# $$ n_{\text{corrected}} = \frac{33282}{1 + \frac{33282 - 1}{1,404,225}} \ $$
-
+# ![Formula](https://latex.codecogs.com/gif.latex?n_%7B%5Ctext%7Bcorrected%7D%7D%20%3D%20%5Cfrac%7B33282%7D%7B1%20&plus;%20%5Cfrac%7B33282%20-%201%7D%7B1%2C404%2C225%7D%7D)
 **Required Sample Size:**
 # - 32,511 surveys is our target. 🎯
 
